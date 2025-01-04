@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="universal2100-kernel"
+          fetch="https://github.com/universal2100-kernel"
+          revision="lineage-22.1"
+          />
+
+  <!-- Kernel -->
+  <project name="kernel_samsung_universal2100" path="kernel" remote="universal2100-kernel"/>
+  <project name="dt-configs" path="dt-configs" remote="universal2100-kernel"/>
+
+  <!-- Build Script -->
+  <project name="build" path="build" remote="universal2100-kernel"/>
+    <linkfile src="build.sh" dest="build.sh" />
+
+  <!-- Ramdisk -->
+  <project name="vendor" path="vendor" remote="universal2100-kernel"/>
+  <project name="fstab" path="fstab" remote="universal2100-kernel"/>
+
+  <!-- Tools -->
+  <project name="mkdtimg" path="mkdtimg" remote="universal2100-kernel"/>
+  <project name="android_external_avb" path="external_avb" remote="universal2100-kernel"/>
+  <project name="android_system_tools_mkbootimg" path="mkbootimg" remote="universal2100-kernel"/>
+  
+</manifest>
