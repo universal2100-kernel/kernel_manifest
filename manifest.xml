@@ -14,9 +14,13 @@
   <project name="build" path="build" remote="universal2100-kernel"/>
     <linkfile src="build.sh" dest="build.sh" />
 
-  <!-- Ramdisk -->
-  <project name="vendor" path="vendor" remote="universal2100-kernel"/>
-  <project name="fstab" path="fstab" remote="universal2100-kernel"/>
+  <!-- Vendor Boot Ramdisk -->
+  <project name="vendor" path="vendor_boot_ramdisk/vendor" remote="universal2100-kernel"/>
+  <project name="fstab" path="vendor_boot_ramdisk/fstab" remote="universal2100-kernel"/>
+  <project name="modules-load" path="vendor_boot_ramdisk/modules-load" remote="universal2100-kernel"/>
+
+  <!-- Boot Ramdisk -->
+  <project name="boot_ramdisk" path="boot_ramdisk" remote="universal2100-kernel"/>
 
   <!-- Tools -->
   <project name="mkdtimg" path="mkdtimg" remote="universal2100-kernel"/>
